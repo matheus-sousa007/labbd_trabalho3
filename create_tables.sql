@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS STATUS (
     StatusId INT PRIMARY KEY,
-    Status VARCHAR(20) NOT NULL
+    Status VARCHAR(20) 
 );
 
 CREATE TABLE IF NOT EXISTS SEASONS (
@@ -10,8 +10,8 @@ CREATE TABLE IF NOT EXISTS SEASONS (
 
 CREATE TABLE IF NOT EXISTS COUNTRIES (
     Id INT PRIMARY KEY,
-    Code CHAR(2) NOT NULL,
-    Name VARCHAR(60) NOT NULL,
+    Code CHAR(2),
+    Name VARCHAR(60),
     Continent CHAR(2),
     WikipediaLInk VARCHAR(255),
     Keywords VARCHAR(60)
@@ -19,16 +19,16 @@ CREATE TABLE IF NOT EXISTS COUNTRIES (
 
 CREATE TABLE IF NOT EXISTS AIRPORTS (
     Id INT PRIMARY KEY,
-    Ident VARCHAR(10) NOT NULL,
+    Ident VARCHAR(10),
     Type VARCHAR(15),
-    Name VARCHAR(60) NOT NULL,
-    LatDeg FLOAT NOT NULL,
-    LongDeg FLOAT NOT NULL,
+    Name VARCHAR(60) ,
+    LatDeg FLOAT,
+    LongDeg FLOAT,
     ElevFt INT,
     Continent CHAR(2),
-    ISOCountry CHAR(2) NOT NULL,
+    ISOCountry CHAR(2),
     ISORegion CHAR(5),
-    City VARCHAR(60) NOT NULL,
+    City VARCHAR(60),
     Scheduled_Service VARCHAR(3),
     ICAOCode CHAR(4),
     IATACode CHAR(3),
